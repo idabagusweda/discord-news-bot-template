@@ -156,7 +156,10 @@ GitHub Actions requires write permissions to commit `data/state.json` back to yo
 2. Select **Discord News Aggregator** from the left workflow sidebar.
 3. Click **Run workflow** -> select branch `main` -> click **Run workflow**.
 4. Check your Discord channels. Verification articles should arrive within seconds.
-5. To activate automated scheduled runs, open `.github/workflows/discord-news.yml`, uncomment the `schedule` block, and commit changes:
+
+> **Important:** In this template, automated scheduled cron runs (`schedule:`) are commented out by default so new repositories won't trigger failed workflow runs before Discord Webhook secrets are configured. Once you have tested the manual run and confirmed that messages arrive in Discord, activate automated hourly runs:
+
+5. Open `.github/workflows/discord-news.yml`, uncomment the entire `schedule` block (remove the `#` characters from `schedule:` and `- cron:`), and commit the changes:
 
 ```yaml
 on:

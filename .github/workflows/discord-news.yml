@@ -2,11 +2,10 @@ name: Discord News Aggregator
 
 on:
   workflow_dispatch:
-  schedule:
-    # Runs every hour at minute 15.
-    # Note: GitHub Actions scheduled runs can experience slight delays depending on queue load.
-    # To activate scheduled runs, remove the '#' symbol from the line below:
-    # - cron: "15 * * * *"
+  # To enable automated hourly runs, uncomment the schedule block below:
+  # schedule:
+  #   # Runs every hour at minute 15 (UTC). Scheduled runs may have slight delays depending on GitHub Actions queue.
+  #   - cron: "15 * * * *"
 
 permissions:
   contents: write
