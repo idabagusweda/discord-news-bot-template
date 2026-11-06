@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/idabagusweda/discord-news-bot-template/main/.github/assets/banner.png" alt="Discord News Bot Template" width="160" onerror="this.style.display='none'" />
+  <img src="./.github/assets/logo.png" alt="Discord News Bot Template Logo" width="160" />
 </p>
 
 <h1 align="center">Discord News Bot Template</h1>
@@ -232,6 +232,8 @@ After adding a new channel category:
 ```text
 discord-news-bot-template/
 ├── .github/
+│   ├── assets/
+│   │   └── logo.png           # Project branding logo
 │   └── workflows/
 │       └── discord-news.yml   # Scheduled GitHub Actions automation workflow
 ├── data/
