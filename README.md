@@ -32,6 +32,26 @@ The entire workflow executes on GitHub Actions runners without requiring a 24/7 
 
 ---
 
+## Preview
+
+Here is how the automated news embeds appear inside Discord channels:
+
+<p align="center">
+  <img src="./.github/assets/preview-gaming.png" alt="Gaming News Discord Embed Preview" width="680" />
+  <br />
+  <em>Gaming News Embed — includes dynamic source attribution, thumbnail, and custom embed color.</em>
+</p>
+
+<br />
+
+<p align="center">
+  <img src="./.github/assets/preview-tech.png" alt="Tech News Discord Embed Preview" width="680" />
+  <br />
+  <em>Tech News Embed — extracts clean summary and resolves OpenGraph article cover image.</em>
+</p>
+
+---
+
 ## Features
 
 ### Scraping and Content Delivery
@@ -233,9 +253,11 @@ After adding a new channel category:
 discord-news-bot-template/
 ├── .github/
 │   ├── assets/
-│   │   └── logo.png           # Project branding logo
+│   │   ├── logo.png               # Project branding logo
+│   │   ├── preview-gaming.png     # Example output embed preview (Gaming)
+│   │   └── preview-tech.png       # Example output embed preview (Tech)
 │   └── workflows/
-│       └── discord-news.yml   # Scheduled GitHub Actions automation workflow
+│       └── discord-news.yml       # Scheduled GitHub Actions automation workflow
 ├── data/
 │   └── state.json             # Persistent rolling history of sent article IDs
 ├── .env.example               # Template environment variables for local testing
