@@ -1,0 +1,27 @@
+# Environments & Secrets
+.env
+.env.*
+!.env.example
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Operating System
+.DS_Store
+Thumbs.db
+
+# IDE & Editor folders
+.vscode/
+.idea/
+*.swp
+*.swo

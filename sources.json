@@ -1,0 +1,89 @@
+{
+  "settings": {
+    "bot_name": "News Aggregator Bot",
+    "bot_avatar_url": "",
+    "user_agent": "Mozilla/5.0 (compatible; DiscordNewsBot/1.0; +https://github.com)",
+    "request_timeout_seconds": 30,
+    "feed_limit": 12,
+    "initial_send_count_per_source": 1,
+    "max_posts_per_source_per_run": 3,
+    "max_posts_per_channel_per_run": 10,
+    "discord_retry_count": 3,
+    "delay_between_messages_seconds": 1.5,
+    "max_state_records": 3000,
+    "fetch_thumbnail_from_article": true,
+    "seed_past_articles_on_first_run": true
+  },
+  "channels": {
+    "gaming": {
+      "webhook_env": "DISCORD_GAMING_WEBHOOK",
+      "label": "Gaming News",
+      "color": 5793266,
+      "sources": [
+        {
+          "name": "Gamebrott",
+          "type": "rss",
+          "url": "https://gamebrott.com/feed/",
+          "site_url": "https://gamebrott.com/berita/",
+          "language": "id",
+          "enabled": true
+        },
+        {
+          "name": "PasarGames",
+          "type": "rss",
+          "url": "https://pasargames.id/feed/",
+          "site_url": "https://pasargames.id/berita-game/",
+          "language": "id",
+          "enabled": true
+        },
+        {
+          "name": "KotakGame via Google News",
+          "type": "rss",
+          "url": "https://news.google.com/rss/search?q=site%3Akotakgame.com%20(game%20OR%20gaming%20OR%20esports)&hl=id&gl=ID&ceid=ID%3Aid",
+          "site_url": "https://www.kotakgame.com/",
+          "language": "id",
+          "enabled": true
+        }
+      ]
+    },
+    "tech": {
+      "webhook_env": "DISCORD_TECH_WEBHOOK",
+      "label": "Tech News",
+      "color": 3447003,
+      "sources": [
+        {
+          "name": "ANTARA Tekno",
+          "type": "rss",
+          "url": "https://www.antaranews.com/rss/tekno.xml",
+          "site_url": "https://www.antaranews.com/tekno",
+          "language": "id",
+          "enabled": true
+        },
+        {
+          "name": "iTNews Indonesia",
+          "type": "rss",
+          "url": "https://www.itnews.id/feeds/posts/default?alt=rss",
+          "site_url": "https://www.itnews.id/",
+          "language": "id",
+          "enabled": true
+        },
+        {
+          "name": "Kompas Tekno via Google News",
+          "type": "rss",
+          "url": "https://news.google.com/rss/search?q=site%3Atekno.kompas.com%20(teknologi%20OR%20AI%20OR%20gadget)&hl=id&gl=ID&ceid=ID%3Aid",
+          "site_url": "https://tekno.kompas.com/",
+          "language": "id",
+          "enabled": true
+        },
+        {
+          "name": "detik AI via Google News",
+          "type": "rss",
+          "url": "https://news.google.com/rss/search?q=site%3Adetik.com%20(%22artificial%20intelligence%22%20OR%20%22kecerdasan%20buatan%22%20OR%20AI)&hl=id&gl=ID&ceid=ID%3Aid",
+          "site_url": "https://www.detik.com/tag/artificial-intelligence",
+          "language": "id",
+          "enabled": true
+        }
+      ]
+    }
+  }
+}
